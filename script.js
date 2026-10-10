@@ -48,14 +48,14 @@
        A Camisa (+R$ 69,90) do ingresso comum está escrita direto no
        index.html — é valor fixo, não muda por lote. No VIP ela vem inclusa.
 
-       ⚠️ PCPE: "mesmo preço" do Aulão PMPE = R$ 45,00 no comum e R$ 167,00
-       (12x R$ 17,42) no VIP. O comum entra como 1º LOTE e SEM o "+ 1 kg de
+       ⚠️ PCPE: 1º lote do comum a R$ 35,00 (no Aulão PMPE era R$ 45,00); o
+       VIP segue o do PMPE: R$ 167,00 (12x R$ 17,42). O comum entra SEM o "+ 1 kg de
        alimento" — confirme com a equipe se a PCPE também pede o alimento
        (aí é só preencher `extra`, como no script do PMPE). */
     ingressos: {
       loteAtual: 1,
       lotes: [
-        { preco: "R$ 45,00",                                                 // 1º lote (aberto)
+        { preco: "R$ 35,00",                                               // 1º lote (aberto)
           checkout: "https://checkout.cppem.com.br/pay/aulao-pcpe-pos-edital-ingresso-comum" },
         { preco: "", checkout: "" },   // 2º lote
         { preco: "", checkout: "" }    // 3º lote
