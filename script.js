@@ -49,13 +49,12 @@
        index.html — é valor fixo, não muda por lote. No VIP ela vem inclusa.
 
        ⚠️ PCPE: 1º lote do comum a R$ 35,00 (no Aulão PMPE era R$ 45,00); o
-       VIP segue o do PMPE: R$ 167,00 (12x R$ 17,42). O comum entra SEM o "+ 1 kg de
-       alimento" — confirme com a equipe se a PCPE também pede o alimento
-       (aí é só preencher `extra`, como no script do PMPE). */
+       VIP segue o do PMPE: R$ 167,00 (12x R$ 17,42). O comum pede também
+       1 kg de alimento não perecível, como no PMPE (campo `extra`). */
     ingressos: {
       loteAtual: 1,
       lotes: [
-        { preco: "R$ 35,00",                                               // 1º lote (aberto)
+        { preco: "R$ 35,00", extra: "+ 1 kg de alimento não perecível",    // 1º lote (aberto)
           checkout: "https://checkout.cppem.com.br/pay/aulao-pcpe-pos-edital-ingresso-comum" },
         { preco: "", checkout: "" },   // 2º lote
         { preco: "", checkout: "" }    // 3º lote
