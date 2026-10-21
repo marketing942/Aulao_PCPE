@@ -19,9 +19,9 @@
     pagina: "aulao-pcpe",
 
     /* Início do aulão, com fuso. É dele que sai a contagem regressiva.
-       ⚠️ 01/11 é a data informada; o HORÁRIO (08h) foi herdado do Aulão PMPE
+       ⚠️ 15/11 é a data informada; o HORÁRIO (08h) foi herdado do Aulão PMPE
        e precisa ser confirmado. Se mudar, mude também o "08h às 18h" do HTML. */
-    inicio: "2026-11-01T08:00:00-03:00",
+    inicio: "2026-11-15T08:00:00-03:00",
 
     /* ─── INGRESSOS ─────────────────────────────────────────
        Três lotes de ingresso comum + um lote único de VIP.
@@ -216,7 +216,7 @@
         : "Vendas abrem em breve — o 1º lote é o mais barato de todos.";
     });
     $$("[data-urgencia-curta]").forEach(function (el) {
-      el.textContent = aberto ? n + "º lote aberto · 01/11" : "01/11 · Sede do CPPEM";
+      el.textContent = aberto ? n + "º lote aberto · 15/11" : "15/11 · Sede do CPPEM";
     });
     $$("[data-urgencia-lote]").forEach(function (el) { el.textContent = n + "º lote"; });
     /* a fita corrida também é texto fixo no HTML: sem isto ela ficaria
@@ -429,7 +429,7 @@
   alvos.forEach(function (el) { el.classList.add("reveal"); });
 
   /* ─── contagem dos números da ficha ───
-     Só anima número PURO; "01/11", "1 DIA", "08H–18H" e "SEDE" ficam parados. */
+     Só anima número PURO; "15/11", "1 DIA", "08H–18H" e "SEDE" ficam parados. */
   function contar(el) {
     var bruto = el.textContent.trim();
     if (!/^\d{1,3}(\.\d{3})*$/.test(bruto)) return;
