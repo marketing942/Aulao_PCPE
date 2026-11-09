@@ -55,11 +55,11 @@
       loteAtual: 1,
       lotes: [
         { preco: "R$ 35,00", extra: "+ 1 kg de alimento não perecível",    // 1º lote (aberto)
-          checkout: "https://checkout.cppem.com.br/pay/aulao-pcpe-pos-edital-ingresso-comum" },
+          checkout: "https://checkout.cppem.com.br/pay/ingresso-comum-aulao-pcpe-pos-edital" },
         { preco: "", checkout: "" },   // 2º lote
         { preco: "", checkout: "" }    // 3º lote
       ],
-      vip: { preco: "R$ 167,00", parcelas: "12x", parcela: "R$ 17,42", checkout: "https://checkout.cppem.com.br/pay/aulao-pcpe-pos-edital-ingresso-vip" },
+      vip: { preco: "R$ 167,00", parcelas: "12x", parcela: "R$ 17,42", checkout: "https://checkout.cppem.com.br/pay/ingresso-vip-aulao-pcpe-pos-edital" },
 
       /* ─── ESCASSEZ ───
          capacidade: quantas cadeiras a sala da sede comporta. ⚠️ Não foi
