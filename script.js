@@ -48,15 +48,15 @@
        A Camisa (+R$ 69,90) do ingresso comum está escrita direto no
        index.html — é valor fixo, não muda por lote. No VIP ela vem inclusa.
 
-       ⚠️ PCPE: 1º lote do comum a R$ 35,00 (no Aulão PMPE era R$ 45,00); o
-       VIP segue o do PMPE: R$ 167,00 (12x R$ 17,42). O comum pede também
-       1 kg de alimento não perecível, como no PMPE (campo `extra`). */
+       ⚠️ PCPE: 1º lote do comum a R$ 35,00 + 1 kg de alimento (ENCERRADO);
+       2º lote (ABERTO) a R$ 45,00, sem alimento; o VIP segue o do PMPE:
+       R$ 167,00 (12x R$ 17,42). */
     ingressos: {
-      loteAtual: 1,
+      loteAtual: 2,
       lotes: [
-        { preco: "", extra: "+ 1 kg de alimento não perecível",    // 1º lote
+        { preco: "R$ 35,00", extra: "+ 1 kg de alimento não perecível",    // 1º lote (encerrado)
           checkout: "" },
-        { preco: "R$ 45,00", checkout: "https://checkout.cppem.com.br/pay/ingresso-comum-aulao-pcpe-pos-edital" },   // 2º lote
+        { preco: "R$ 45,00", checkout: "https://checkout.cppem.com.br/pay/ingresso-comum-aulao-pcpe-pos-edital" },   // 2º lote (aberto)
         { preco: "", checkout: "" }    // 3º lote
       ],
       vip: { preco: "R$ 167,00", parcelas: "12x", parcela: "R$ 17,42", checkout: "https://checkout.cppem.com.br/pay/ingresso-vip-aulao-pcpe-pos-edital" },
@@ -211,7 +211,7 @@
     $$("[data-urgencia]").forEach(function (el) {
       el.textContent = aberto
         ? n + "º lote aberto" + (n === 1 ? " — o mais barato de todos" : "") +
-          (lote.extra && lote.preco ? ": " + lote.preco + " " + lote.extra : "") +
+          (lote.preco ? ": " + lote.preco + (lote.extra ? " " + lote.extra : "") : "") +
           ". O valor sobe na virada" + sufixo + "."
         : "Vendas abrem em breve — o 1º lote é o mais barato de todos.";
     });
