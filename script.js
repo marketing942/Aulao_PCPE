@@ -41,7 +41,7 @@
          "vendas abrem em breve" em vez de navegar.
 
        · extra (opcional): o que o lote pede ALÉM do valor — ex.: "+ 1 kg de
-         alimento não perecível". Aparece colado ao preço no cartão do
+         alimento não perecível". Aparece colado ao  no cartão do
          comum, na trilha de lotes, no aviso da hero e numa pergunta do FAQ.
          Lote sem `extra` não mostra nada disso.
 
@@ -54,9 +54,9 @@
     ingressos: {
       loteAtual: 1,
       lotes: [
-        { preco: "R$ 35,00", extra: "+ 1 kg de alimento não perecível",    // 1º lote (aberto)
-          checkout: "https://checkout.cppem.com.br/pay/ingresso-comum-aulao-pcpe-pos-edital" },
-        { preco: "", checkout: "" },   // 2º lote
+        { preco: "", extra: "+ 1 kg de alimento não perecível",    // 1º lote
+          checkout: "" },
+        { preco: "R$ 45,00", checkout: "https://checkout.cppem.com.br/pay/ingresso-comum-aulao-pcpe-pos-edital" },   // 2º lote
         { preco: "", checkout: "" }    // 3º lote
       ],
       vip: { preco: "R$ 167,00", parcelas: "12x", parcela: "R$ 17,42", checkout: "https://checkout.cppem.com.br/pay/ingresso-vip-aulao-pcpe-pos-edital" },
